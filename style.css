@@ -1,0 +1,150 @@
+/* Custom Properties */
+
+:root {
+    --clr-violet: hsl(263, 55%, 52%);
+    --clr-dark-grey: hsl(217, 19%, 35%);
+    --clr-dark-blue: hsl(219, 29%, 14%);
+    --clr-white: hsl(0, 0%, 100%);
+    --clr-light-grey: hsl(0, 0%, 81%);
+    --clr-light-blue: hsl(210, 46%, 95%);
+
+    --ff-barlow-semi: 'Barlow Semi Condensed', sans-serif;
+    --fs-regular: 0.8rem;
+    --fs-large: 1.25rem;
+    --fw-regular: 500;
+    --fw-medium: 600;
+}
+
+/* Reset */
+
+*,
+*:before,
+*:after {
+    box-sizing: border-box;
+}
+
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    margin: 0;
+    padding: 0;
+}
+
+img {
+    display: block;
+    max-width: 100%;
+}
+
+/* Global Styles */
+
+body {
+    background-color: var(--clr-light-blue);
+    font-family: var(--ff-barlow-semi);
+    font-size: var(--fs-regular);
+    line-height: 1.4;
+}
+
+
+/* Utility Classes */
+
+.bg-violet {
+    background-color: var(--clr-violet);
+}
+
+.bg-dark-grey {
+    background-color: var(--clr-dark-grey);
+}
+
+.bg-dark-blue {
+    background-color: var(--clr-dark-blue);
+}
+
+.bg-white {
+    background-color: var(--clr-white);
+}
+
+.text-light {
+    color: var(--clr-white);
+}
+
+.text-dark {
+    color: var(--clr-dark-grey);
+}
+
+.relative {
+    position: relative;
+}
+
+/* General Styling */
+
+.grid-container {
+    display: grid;
+    grid-gap: 1rem;
+    padding: 1rem;
+    width: 90%;
+    margin: 0 auto;
+}
+
+@media(min-width: 900px) {
+    .grid-container {
+        grid-template: repeat(2, auto) / repeat(4, 1fr);
+}
+
+    .testimonial-1 {
+        grid-area: span 1 / span 2;
+    }
+
+    .testimonial-4 {
+        grid-column: 2 / 4;
+    }
+
+    .testimonial-5 {
+        grid-row-start: 1;
+        grid-row-end: 3;
+        grid-column-start: 4;
+    }
+}
+
+.testimonial {
+    color: var(--clr-white);
+    border-radius:8px;
+    padding: 2rem;
+}
+
+.testimonial > * {
+    margin-bottom: 1.6rem;
+}
+
+.testimonial__author {
+    display: flex;
+    gap: 1.6rem;
+}
+
+.testimonial__image {
+    border: 1px solid var(--clr-white);
+    border-radius: 50%;
+}
+
+.highlight {
+    font-size: var(--fs-large);
+    font-weight: var(--fw-medium);
+}
+
+
+.verified {
+    opacity: .5;
+}
+
+.review-text {
+    opacity: .7;
+}
+
+.quotation-marks {
+    position: absolute;
+    top: 0;
+    right: 10%;
+}
